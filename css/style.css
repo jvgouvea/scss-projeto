@@ -52,6 +52,12 @@ input {
   text-shadow: 3px 2px #000;
 }
 
+.services-container h2 {
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .btn {
   padding: 0.6rem 1rem;
   border: 1px solid #fff;
@@ -141,4 +147,46 @@ input {
 #main-banner .title-container h2 {
   font-size: 3rem;
   margin-top: 1rem;
+}
+
+.services-container {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.services-container .btn-services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services-container .services-card-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+.services-container .services-card-container-item {
+  margin: 1%;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+.services-container .services-card-container-item i {
+  color: #ff5200;
+  font-size: 4rem;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.services-container .services-card-container-item h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.services-container .services-card-container-item p {
+  max-width: 58ch;
+}
+.services-container .services-card-container-item:hover {
+  border: 1px solid #ff5200;
 }/*# sourceMappingURL=style.css.map */
