@@ -73,10 +73,10 @@
   padding: 2rem;
   margin-bottom: 2rem;
 
-  .btn-services-container{
+  .btn-services-container {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
   }
 
   h2 {
@@ -104,19 +104,96 @@
         margin-bottom: 1.5rem;
       }
 
-      h3{
+      h3 {
         margin-bottom: 1rem;
         font-size: 1.5rem;
         font-weight: bold;
       }
 
-      p{
+      p {
         max-width: 58ch;
       }
 
-      &:hover{
+      &:hover {
         border: 1px solid $primary-color;
       }
+    }
+  }
+}
+
+.jobs-container {
+  background-color: $secondary-bg;
+  padding: 3rem;
+  h2 {
+    @extend %section-title;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+
+    .job-card-cover {
+      width: 100%;
+      height: 100%;
+      padding-top: 1.75rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 3px solid $primary-color;
+    }
+
+    .job-card-title {
+      text-align: center;
+      color: $light-color;
+      font-size: 2.2rem;
+      transition: 0.5s;
+    }
+
+    .job-card-description {
+      text-align: center;
+      color: $light-color;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  .first-job {
+    margin: 0 1%;
+    width: 100%;
+    height: 415px;
+    background-image: url("../img/job1.jpg");
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    @extend %center-bg;
+    @extend %card-hover;
+  }
+
+  .other-jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .job-card {
+      width: 48.5%;
+      height: 200px;
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 15px;
+      margin-right: 15px;
+      @extend %center-bg;
+      @extend %card-hover;
+    }
+
+    #job2 {
+      background-image: url("../img/job2.jpg");
+    }
+    #job3 {
+      background-image: url("../img/job3.jpg");
+    }
+    #job4 {
+      background-image: url("../img/job4.jpg");
+    }
+    #job5 {
+      background-image: url("../img/job5.jpg");
     }
   }
 }

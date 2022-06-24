@@ -6,14 +6,32 @@
 }
 
 // Placeholder selectors
-%title-text-shadow{
+%title-text-shadow {
   text-shadow: 3px 2px $black;
 }
 
-%section-title{
+%section-title {
   font-size: 3rem;
+  font-weight: bold;
   margin-top: 2rem;
   text-align: center;
+}
+
+%center-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+%card-hover {
+  .job-card-cover {
+    opacity: 0;
+  }
+
+  &:hover {
+    .job-card-cover {
+      opacity: 1;
+    }
+  }
 }
 
 // Buttons
