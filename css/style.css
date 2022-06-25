@@ -146,6 +146,14 @@ input {
   color: #fff;
   display: none;
 }
+@media (max-width: 800px) {
+  #main-banner .nav-container .fas.fa-bars {
+    display: block;
+  }
+  #main-banner .nav-container .nav-container-navbar {
+    display: none;
+  }
+}
 #main-banner .title-container {
   color: #fff;
   display: flex;

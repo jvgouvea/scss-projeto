@@ -48,6 +48,15 @@
       color: $light-color;
       display: none;
     }
+
+    @include tablet {
+      .fas.fa-bars {
+        display: block;
+      }
+      .nav-container-navbar {
+        display: none;
+      }
+    }
   }
   .title-container {
     color: $light-color;
