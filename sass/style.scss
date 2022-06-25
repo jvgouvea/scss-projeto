@@ -10,7 +10,7 @@
 #main-banner {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/office.jpg");
-  height: 85vh;
+  height: 100vh;
   background-size: cover;
   background-position: center;
 
@@ -123,15 +123,19 @@
 
 .jobs-container {
   background-color: $secondary-bg;
-  padding: 3rem;
+  padding: 2rem;
   h2 {
     @extend %section-title;
   }
 
   &-list {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5%;
     padding: 2rem 0;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
 
     .job-card-cover {
       width: 100%;
@@ -166,14 +170,20 @@
     transition: 0.5s;
     @extend %center-bg;
     @extend %card-hover;
+    @include tablet {
+      margin: 0;
+      height: 200px;
+    }
   }
 
   .other-jobs-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
 
     .job-card {
-      width: 48.5%;
       height: 200px;
       position: relative;
       cursor: pointer;
@@ -181,6 +191,9 @@
       margin-right: 15px;
       @extend %center-bg;
       @extend %card-hover;
+      @include tablet {
+        width: 100%;
+      }
     }
 
     #job2 {
@@ -194,6 +207,54 @@
     }
     #job5 {
       background-image: url("../img/job5.jpg");
+    }
+  }
+}
+
+footer {
+  background-color: $footer-bg;
+  color: $text-color;
+  padding: 5rem 2rem;
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+    &-desc {
+      max-width: 68ch;
+    }
+
+    .footer-title {
+      color: $light-color;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+
+      &-list {
+        li {
+          margin-bottom: 0.5rem;
+        }
+        a {
+          color: $text-color;
+          transition: 0.5s;
+
+          &:hover {
+            color: $light-color;
+          }
+        }
+      }
+    }
+    .footer-copy-right-container p:first-child {
+      margin-bottom: 0.5rem;
     }
   }
 }

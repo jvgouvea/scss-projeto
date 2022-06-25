@@ -103,7 +103,7 @@ input {
 
 #main-banner {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/office.jpg");
-  height: 85vh;
+  height: 100vh;
   background-size: cover;
   background-position: center;
 }
@@ -206,12 +206,18 @@ input {
 
 .jobs-container {
   background-color: #e5eaff;
-  padding: 3rem;
+  padding: 2rem;
 }
 .jobs-container-list {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5%;
   padding: 2rem 0;
+}
+@media (max-width: 800px) {
+  .jobs-container-list {
+    grid-template-columns: 1fr;
+  }
 }
 .jobs-container-list .job-card-cover {
   width: 100%;
@@ -241,17 +247,32 @@ input {
   cursor: pointer;
   transition: 0.5s;
 }
+@media (max-width: 800px) {
+  .jobs-container .first-job {
+    margin: 0;
+    height: 200px;
+  }
+}
 .jobs-container .other-jobs-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 800px) {
+  .jobs-container .other-jobs-container {
+    grid-template-columns: 1fr;
+  }
 }
 .jobs-container .other-jobs-container .job-card {
-  width: 48.5%;
   height: 200px;
   position: relative;
   cursor: pointer;
   margin-bottom: 15px;
   margin-right: 15px;
+}
+@media (max-width: 800px) {
+  .jobs-container .other-jobs-container .job-card {
+    width: 100%;
+  }
 }
 .jobs-container .other-jobs-container #job2 {
   background-image: url("../img/job2.jpg");
@@ -264,4 +285,46 @@ input {
 }
 .jobs-container .other-jobs-container #job5 {
   background-image: url("../img/job5.jpg");
+}
+
+footer {
+  background-color: #1d1d1d;
+  color: #8b8e94;
+  padding: 5rem 2rem;
+}
+footer .footer-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+@media (max-width: 800px) {
+  footer .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+footer .footer-container-desc {
+  max-width: 68ch;
+}
+footer .footer-container .footer-title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+footer .footer-container .footer-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+footer .footer-container .footer-links-container-list li {
+  margin-bottom: 0.5rem;
+}
+footer .footer-container .footer-links-container-list a {
+  color: #8b8e94;
+  transition: 0.5s;
+}
+footer .footer-container .footer-links-container-list a:hover {
+  color: #fff;
+}
+footer .footer-container .footer-copy-right-container p:first-child {
+  margin-bottom: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
